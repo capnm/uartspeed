@@ -13,7 +13,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-//#include <sys/ioctl.h>
 #include <fcntl.h>
 #include <errno.h>
 #include <asm/termios.h>
@@ -21,7 +20,8 @@
 extern int ioctl(int a, unsigned int b, void *tio);
 static void setraw(struct termios2* t2);
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[])
+{
 
 	if (argc < 3) {
 		printf("%s device speed\n\nSet speed for a serial device.\n"
